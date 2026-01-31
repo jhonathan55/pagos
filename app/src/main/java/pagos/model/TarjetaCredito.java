@@ -1,8 +1,9 @@
 package pagos.model;
 
-import pagos.interfaces.Pago;
+import pagos.abstratcs.BasePagos;
 
-public class TarjetaCredito implements Pago {
+
+public class TarjetaCredito extends BasePagos {
     private String numeroTarjeta;
 
     public TarjetaCredito(String numeroTarjeta) {
@@ -10,8 +11,7 @@ public class TarjetaCredito implements Pago {
     }
 
     @Override
-    public void pago(int monto) {
-        System.out.println("Pago de " + monto + " realizado con Tarjeta de Crédito número " + numeroTarjeta);
+    protected void porPagar(int monto) {
+        System.out.println("Pago de " + monto + " realizado con Tarjeta de Crédito número "+numeroTarjeta );
     }
-
 }

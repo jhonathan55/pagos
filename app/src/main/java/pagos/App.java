@@ -15,8 +15,8 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CarroCompra carro = new CarroCompra();
-        carro.agregarProducto(new Producto("Notebook", 670000));
-        carro.agregarProducto(new Producto("Mouse", 15000));
+        carro.agregarProducto(new Producto("Notebook", 0));
+        
 
         boolean salir = true;
         int opcion = 0;

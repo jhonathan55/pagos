@@ -1,8 +1,8 @@
 package pagos.model;
 
-import pagos.interfaces.Pago;
+import pagos.abstratcs.BasePagos;
 
-public class Bitcoin implements Pago {
+public class Bitcoin extends BasePagos {
     private String billetera;
 
     public Bitcoin(String billetera) {
@@ -10,7 +10,9 @@ public class Bitcoin implements Pago {
     }
 
     @Override
-    public void pago(int monto) {
+    protected void porPagar(int monto) {
         System.out.println("Pago de " + monto + " realizado con Bitcoin a la billetera " + billetera);
     }
+
+   
 }
